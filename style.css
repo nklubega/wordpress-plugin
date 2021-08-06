@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+* 
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' sans-serif;
+}
+body
+{
+    overflow-x: hidden;
+
+}
+.container
+{
+  position: relative;
+  width: 100%;
+}
+.navigation
+{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: #003147;
+    transition: 0.5%;
+    overflow: hidden;
+}
+.navigation.active
+{
+    width: 60px;
+}
+.navigation ul
+{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+}
+.navigation ul li
+{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+.navigation ul li:hover
+{
+    background: #03a9f4;
+}
+.navigation ul li:nth-child(1)
+{
+    margin-bottom: 20px;
+}
+.navigation ul li:nth-child(1):hover
+{
+    background: transparent;
+}
+.navigation ul li a
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+.navigation ul li a .icon
+{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px ;
+    text-align: center;
+}
+.navigation ul li a .icon .fa
+{
+  color: #fff;
+  font-size: 24px;
+}
+.navigation ul li a .title
+{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+.main
+{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: #f5f5f5;
+    transition: 0.5s;
+}
+.main.active
+{
+    width: calc(100% - 60px);
+    left: 60px;
+}
+.main .topbar
+{
+    width: 100%;
+    background: #fff;
+    padding: 0 10px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle
+{
+position: relative;
+width: 60px;
+height: 60px;
+cursor: pointer;
+}
+.toggle::before 
+{
+    content: '\f0c9';
+    font-family: "Font Awesome 5 Free"; font-weight: 900;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 24px;
+    text-align: center;
+    color: #111;
+}
+.search
+{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+.searh label
+{
+    position: relative;
+    width: 100%;
+}
+.search label input
+{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding-left: 35px;
+    padding: 5px 20px;
+    outline: none;
+    border: 1px solid;
+}
+.search label .fas
+{
+position: absolute;
+left: 5px;
+top: 15px;
+}
+.user
+{
+    position: relative;
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.user img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+.cardbox
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+}
+.cardbox .card
+{
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    grid-row: 10px;
+}
+.cardbox .card .numbers
+{
+    position: relative;
+    font-size: 0.7cm;
+    font-weight: 500;
+}
+.cardbox .card .cardname
+{
+    color: #999;
+    font-size: small;
+}
+.cardbox .card .iconbox 
+{
+    font-size: 1cm;
+    color: #03a9f4;
+}
+.details
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.details .recentshifts
+{
+    position: relative;
+    display: grid;
+    min-height: 530px;
+    background: #fff;
+    padding: 20px;
+}
+.cardheader
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cardheader h2
+{
+    font-weight: 600;
+}
+.btn
+{
+    position: relative;
+    padding: 5px 10px;
+    background: #03a9f4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;  
+}
+.details table
+{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0;
+    background-color: rgb(238, 229, 229);
+    height: 1px;
+    
+}
+.details table thead td
+{
+    font-weight: 600;
+    height: 10px;
+}
+.details .recentshifts table tr
+{
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  height: 5px;
+}
+.details .recentshifts table tbody tr:last-child
+{
+    border-bottom: none;
+}
+.details .recentshifts table tbody tr:hover
+{
+  background: #03a9f4;
+  color: #fff;
+}
+.details .recentshifts table tr td
+{
+    padding: 20px 5px;
+}
+x
+.details .recentshifts table thead tr td:nth-child(3),
+.details .recentshifts table tbody tr td:nth-child(3)
+{
+    text-align: center;
+}
+.status
+{
+    position: relative;
+    padding: 2px 4px;
+    background: #f00;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.delivered
+{
+    background: #8de02c;
+}
+.pending
+{
+    background: #f9ca3f;
+}
+.inprogress
+{
+    background: #1795ce;
+}
+.statistics
+{
+    position: relative;
+    display: grid;
+    min-height: 530px;
+    background: #fff;
+    padding: 20px;
+}
+
+/* now make it responsive */
+
+@media (max-width: 992px)
+{
+    .navigation
+    {
+        left: -300px;
+    }
+    .navigation.active
+    {
+        left: 0;
+    }
+    .main
+    {
+        width: 100%;
+        left: 0;
+    }
+    .main.active
+    {
+        width: calc(100% - 300px);
+        left: 300px;
+    }
+    .cardbox
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+@media (max-width: 768px)
+{
+    .details
+    {
+        grid-template-columns: repeat(1,1fr);   
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

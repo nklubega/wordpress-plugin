@@ -1,0 +1,81 @@
+
+/* Full-width input fields */
+  
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+    text-align: left;
+  }
+  
+  button:hover {
+    opacity:1;
+  }
+  
+  
+  /* Add padding to container elements */
+  .container {
+    padding: 16px;
+  }
+  
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .h1 {
+      color: dodgerblue;
+      text-align: center;
+      position: relative;
+    }
+  h4 {
+        text-align: center;
+    }
+    /*Code for the profile photo plugin*/
+    .kv-avatar .krajee-default.file-preview-frame,.kv-avatar .krajee-default.file-preview-frame:hover {
+      margin: 0;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+      text-align: center;
+  }
+  .kv-avatar {
+      display: inline-block;
+  }
+  .kv-avatar .file-input {
+      display: table-cell;
+      width: 213px;
+  }
+  .kv-reqd {
+      color: red;
+      font-family: monospace;
+      font-weight: normal;
+  }
+  
+  /* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 200px) {
+    .cancelbtn, .signupbtn {
+      width: 100%;
+    }
+  }
